@@ -22,7 +22,6 @@ import {FieldType} from '@ngx-formly/core';
       [yearNavigator]="to.yearNavigator"
       [yearRange]="to.yearRange"
       [placeholder]="to.placeholder"
-      [formControl]="formControl"
       [formlyAttributes]="field"
     >
     </p-calendar>
