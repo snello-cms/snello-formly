@@ -1,0 +1,913 @@
+//@import "variables.less";
+@import "primeng.less";
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: @lightgrey;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: @coop_color_3;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: @coop_color_2;
+
+    &:hover {
+      color: @coop_color_3;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .pull-right {
+    float: right;
+  }
+
+  .pull-left {
+    float: left;
+  }
+
+  .m-t-sm {
+    margin-top: 5px !important;
+  }
+
+  .m-l-sm {
+    margin-left: 5px !important;
+  }
+
+  .m-r-sm {
+    margin-right: 5px !important;
+  }
+
+  .m-n {
+    margin: 0 !important;
+  }
+
+  .m-t-n {
+    margin-top: 0 !important;
+  }
+
+  .text-bold {
+    font-weight: bold !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .text-right {
+    text-align: right !important;
+  }
+
+  .text-left {
+    text-align: left !important;
+  }
+
+  .c-secondary {
+    color: @violet;
+  }
+
+  .dker {
+    opacity: 0.9;
+  }
+
+  .dk {
+    opacity: 0.7;
+  }
+
+  .bg {
+    opacity: 0.5;
+  }
+
+  .lt {
+    opacity: 0.3;
+  }
+
+  .lter {
+    opacity: 0.1;
+  }
+
+  .w-f {
+    width: 100%;
+  }
+
+  .calendar-input {
+    position: relative;
+
+    input {
+      width: 100%;
+
+      &.ui-inputtext {
+        width: 100% !important;
+      }
+    }
+
+    .form-control-calendar {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  .tree-wrapper {
+    background-color: #333333;
+    border-radius: 4px;
+    padding: 10px 20px !important;
+    text-align: left;
+    margin-bottom: 0;
+    border-radius: 4px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .tree-wrapper ul {
+    padding: 0px;
+    margin: 0xp;
+  }
+  .tree-wrapper ul li {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 0px;
+    border-bottom: 0px solid #ccc;
+  }
+
+  .tree-wrapper ul li:hover {
+    cursor: pointer;
+  }
+  .tree-wrapper ul li.list {
+    border-bottom: 1px solid #ccc;
+  }
+  .tree-wrapper ul li .arrow {
+    width: 20px;
+    text-align: center;
+    float: left;
+    height: 20px;
+    padding-left: 0px;
+    margin-top: 3px !important;
+    margin-right: 10px;
+    margin-left: 4px;
+  }
+  .tree-wrapper ul li ul {
+    padding: 0px;
+  }
+  .tree-wrapper ul li ul li {
+    margin: 10px 0px;
+    background-color: none;
+  }
+  .tree-wrapper ul li ul li ul {
+    padding: 0px;
+  }
+  .tree-wrapper ul li ul li ul li {
+    margin: 10px 0px;
+    background-color: none;
+  }
+
+  .tree-wrapper ul li > span.active {
+    background-color: #999999;
+    padding: 4px 4px;
+    border-radius: 4px;
+    display: block;
+    margin: 10px 0px;
+
+    .arrow {
+      width: 20px;
+      text-align: center;
+      float: left;
+      height: 20px;
+      padding-left: 0px;
+      margin-top: 3px !important;
+      margin-right: 10px;
+      margin-left: 4px;
+    }
+  }
+
+  .sidebar-folder {
+    .sidebar-inner {
+      padding: 0px 0px;
+      .tags-wrapper {
+        padding: 0px;
+        padding-top: 20px;
+        float: left;
+        width: 100%;
+        border-top: 1px dotted #ccc;
+
+        .tags-item {
+          border-radius: 25px;
+          height: 26px;
+          line-height: 26px;
+          float: left;
+          position: relative;
+          font-size: 14px;
+          margin-right: 7px;
+          padding: 0 15px 0 15px;
+          margin-bottom: 7px;
+          background-color: @white;
+          color: @coop_color_3;
+
+          i {
+            margin-right: 10px;
+          }
+
+          .btn-close {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            color: @white;
+            padding: 0;
+            border: 0;
+            font-weight: 700;
+            background-color: transparent;
+            height: 26px;
+            width: 26px;
+            line-height: 26px;
+            text-align: center;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: @coop_color_3;
+    overflow-x: hidden;
+    transition: 0.1s;
+    padding-top: 60px;
+
+    .ui-accordion-header {
+      border-radius: 0px !important;
+      margin: 0px !important;
+      border-bottom: 1px dotted #ccc;
+      position: relative !important;
+      a {
+        background-color: transparent;
+        border-radius: 0px !important;
+        color: @white;
+        padding: 0px 0px;
+        font-size: 16px;
+        height: 60px !important;
+        line-height: 60px !important;
+        font-weight: 500;
+
+        .ui-accordion-toggle-icon {
+          color: @white !important;
+          opacity: 0.5 !important;
+          width: 60px !important;
+          text-align: center;
+          padding: 0px;
+          line-height: 60px;
+        }
+
+        .ui-accordion-header-text {
+          color: @white !important;
+          padding-left: 0px !important;
+        }
+
+        &:focus {
+          outline: 0 none;
+          outline-offset: 0;
+          box-shadow: none !important;
+        }
+      }
+
+      &:not(.ui-state-disabled).ui-state-active a {
+        background-color: #333333 !important;
+        border: 0 solid #333333 !important;
+        color: #ffffff !important;
+      }
+    }
+
+    .ui-accordion-content {
+      margin: 0px !important;
+      padding: 0px !important;
+    }
+
+    ul {
+      margin: 0px !important;
+      padding: 0px !important;
+      li {
+        list-style-type: none;
+        margin: 0px;
+        height: 40px !important;
+        line-height: 40px;
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          color: @coop_color_3;
+          display: block;
+          transition: 0.3s;
+          list-style-type: none;
+
+          padding: 0px 10px 0px 0px;
+
+          span {
+            padding-right: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &.active {
+            background-color: @coop_color_2;
+            color: @white;
+
+            i {
+              color: @white !important;
+            }
+          }
+
+          i {
+            float: left;
+            font-size: 17px;
+            width: 60px;
+            line-height: 40px;
+            text-align: center;
+            color: @coop_color_2;
+          }
+
+          &:hover {
+            background-color: #ddd !important;
+          }
+        }
+      }
+    }
+
+    ul.menu {
+      margin: 0px !important;
+      padding: 0px !important;
+
+      li {
+        list-style-type: none;
+        float: left;
+        width: 100%;
+        height: 50px !important;
+        line-height: 50px !important;
+
+        a {
+          padding: 0px 20px;
+          text-decoration: none;
+          font-size: 16px;
+          color: @white;
+          display: block;
+          transition: 0.3s;
+
+          span {
+            float: left;
+            display: none !important;
+            visibility: hidden !important;
+            transition: visibility 0.1s;
+          }
+
+          &:hover {
+            color: #f1f1f1;
+            height: 60px;
+          }
+
+          i {
+            float: left;
+            font-size: 20px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px !important;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &.open {
+      width: 250px;
+
+      ul {
+        li {
+          a {
+            span {
+              display: inherit !important;
+              visibility: visible !important;
+            }
+          }
+        }
+      }
+    }
+
+    &.close {
+      width: 60px;
+
+      .ui-accordion-header {
+        height: 60px !important;
+        line-height: 60px !important;
+      }
+
+      .ui-accordion-toggle-icon {
+      }
+
+      .ui-accordion-header-text {
+        display: none !important;
+      }
+
+      .footer {
+        display: none !important;
+      }
+
+      ul {
+        li {
+          a {
+            span {
+              display: none !important;
+              visibility: hidden !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-top {
+    height: 60px;
+    background-color: @white;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    .title-wrapper {
+      float: left;
+      margin-left: 20px;
+      color: @coop_color_2;
+      font-size: 13px;
+      font-weight: 400;
+      padding-top: 5px;
+    }
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: @white;
+      color: @coop_color_3;
+      width: 60px;
+      height: 60px;
+      border: none;
+      text-align: center;
+      line-height: 60px;
+      float: left;
+      border-right: 1px solid #ccc;
+
+      &:hover {
+        background-color: @coop_color_2;
+        color: @white;
+      }
+    }
+
+    .logo-wrapper {
+      float: left;
+      margin-left: 20px;
+      top: 20px;
+      position: relative;
+      height: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #ccc;
+
+      img {
+        height: 20px;
+      }
+    }
+
+    .user-menu {
+      float: right;
+      list-style-type: none;
+      margin-top: 20px;
+      margin-right: 16px;
+
+      li {
+        float: left;
+        list-style: none;
+        margin: 0px 6px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .top-wrapper {
+    background-color: @lightgrey;
+    padding: 25px 0px 15px 0px;
+    margin-bottom: 5px;
+
+    .ui-button {
+      margin-left: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      position: relative;
+      padding: 0 0 0 15px;
+      display: inline-block;
+      color: fade(@coop_color_3, 90%);
+
+      &:before {
+        content: "\f054";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        /*--adjust as necessary--*/
+        color: @coop_color_2;
+        font-size: 15px;
+        padding-right: 0.5em;
+        position: absolute;
+        top: 6px;
+        left: 0;
+      }
+    }
+  }
+
+  #main {
+    transition: margin-left 0.1s;
+    margin-left: 60px;
+    padding: 60px 20px 20px 20px;
+
+    &.open {
+      margin-left: 60px;
+    }
+
+    &.close {
+      margin-left: 250px;
+    }
+  }
+
+  .wrapper {
+    .sub-section-wrapper {
+      background-color: fade(@coop_color_3, 6%);
+      padding: 10px 15px;
+    }
+
+    .font-group {
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+
+      li {
+        padding: 5px 10px;
+        list-style-type: none;
+        width: 33%;
+        float: left;
+
+        i {
+          color: @coop_color_2;
+          font-size: 20px;
+          width: 40px;
+        }
+
+        span {
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .menu-item-wrapper {
+      .ui-card {
+        position: relative;
+        border: 1px solid @white;
+
+        .menu-items {
+          padding-left: 10px;
+
+          h3 {
+            margin: 0;
+            padding: 10px 0;
+
+            i {
+              color: @coop_color_2;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        .menu-item-icon {
+          font-size: 30px;
+          color: fade(@coop_color_3, 20%);
+          float: right;
+          margin-right: 10px;
+        }
+
+        &:hover {
+          border: 1px solid @coop_color_2;
+        }
+      }
+    }
+
+    .menu-item-wrapper-launcher {
+      h3 {
+        margin: 0;
+        padding: 0px 0px 10px 0px;
+
+        i {
+          color: @coop_color_2;
+          margin-right: 10px;
+        }
+      }
+      .ui-card {
+        position: relative;
+        border: 1px solid @white;
+        padding: 14px 20px;
+        border-radius: 6px;
+
+        .menu-items {
+          padding-left: 0px;
+
+          h3 {
+            margin: 0;
+            padding: 0px 0px 10px 0px;
+
+            i {
+              color: @coop_color_2;
+              margin-right: 10px;
+            }
+          }
+        }
+        .ui-button-tertiary {
+          float: right;
+        }
+
+        .menu-item-icon {
+          font-size: 30px;
+          color: fade(@coop_color_3, 20%);
+          float: left;
+          margin-right: 0px;
+        }
+
+        &:hover {
+          background-color: #fff;
+          border: 1px solid @coop_color_3;
+        }
+
+        .tags-wrapper {
+          margin-top: 10px;
+
+          padding-top: 15px;
+          width: 100%;
+          .tag-item {
+            border-radius: 25px;
+            height: 24px;
+            line-height: 24px;
+            float: left;
+            position: relative;
+            font-size: 13px;
+            margin-right: 7px;
+            padding: 0 15px 0 15px !important;
+            background-color: #efefef;
+            color: @coop_color_3;
+          }
+        }
+      }
+    }
+
+    .filter-wrapper {
+      background-color: fade(@coop_color_3, 6%);
+      width: 100%;
+      display: flex;
+      position: relative;
+      border-radius: 3px 3px 0 0;
+
+      .btn-filter {
+        background-color: @white;
+        color: @coop_color_3;
+        padding: 0 18px;
+        margin-right: 5px;
+        font-size: 16px;
+        float: left;
+        height: 40px !important;
+        line-height: 40px !important;
+        border-radius: 3px 0 0 0;
+
+        i {
+          color: @coop_color_2;
+        }
+      }
+    }
+
+    .filter-wrapper-launcher {
+      background-color: @coop_color_3;
+      width: 100%;
+      display: flex;
+      position: relative;
+      border-radius: 0;
+      padding: 5px 15px 5px 15px;
+      margin: 0px 0px;
+      border-radius: 4px 4px 0px 0px;
+
+      .btn-filter {
+        background-color: @white;
+        color: @coop_color_3;
+        padding: 0 18px;
+        margin-right: 5px;
+        font-size: 16px;
+        float: left;
+        height: 40px !important;
+        line-height: 40px !important;
+        border-radius: 3px 0 0 0;
+
+        i {
+          color: @coop_color_2;
+        }
+      }
+
+      .tags-wrapper {
+        padding: 7px 0px 4px 0px;
+        float: left;
+        width: 100%;
+
+        .tag-item {
+          border-radius: 5px;
+          height: 30px;
+          line-height: 30px;
+          float: left;
+          position: relative;
+          margin-right: 7px;
+          padding: 0 30px 0 10px;
+          background-color: @coop_color_3;
+          color: @white;
+
+          i {
+            margin-right: 10px;
+          }
+
+          .btn-close {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            color: @white;
+            padding: 0;
+            border: 0;
+            font-weight: 700;
+            background-color: transparent;
+            height: 26px;
+            width: 26px;
+            line-height: 26px;
+            text-align: center;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  .tags-wrapper {
+    padding: 7px 10px 4px 10px;
+    float: left;
+
+    .tag-item {
+      border-radius: 25px;
+      height: 26px;
+      line-height: 26px;
+      float: left;
+      position: relative;
+      margin-right: 7px;
+      padding: 0 20px 0 10px;
+      background-color: @coop_color_3;
+      color: @white;
+
+      .btn-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: @white;
+        padding: 0;
+        border: 0;
+        font-weight: 700;
+        background-color: transparent;
+        height: 26px;
+        width: 26px;
+        line-height: 26px;
+        text-align: center;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  .clearfix {
+    display: inline-block;
+  }
+
+  /* start commented backslash hack \*/
+
+  * html .clearfix {
+    height: 1%;
+  }
+
+  .clearfix {
+    display: block;
+  }
+
+  /* close commented backslash hack */
+}
+
+.homepage-accordion {
+  .ui-accordion {
+    .ui-accordion-header:not(.ui-state-disabled).ui-state-active a {
+      background-color: transparent !important;
+      border: 0px solid #007ad9;
+      color: #ffffff;
+    }
+
+    .ui-accordion-header a:focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: none !important;
+    }
+
+    .ui-accordion-header a {
+      background-color: transparent !important;
+      border-bottom: 1px solid #9c9c9c !important;
+      color: rgba(51, 51, 51, 0.9) !important;
+      padding: 10px 0px !important;
+      border-radius: 0px !important;
+      font-size: 20px;
+      position: relative;
+
+      .ui-accordion-toggle-icon {
+        color: #d51c9c !important;
+        font-size: 15px !important;
+        padding-right: 0.5em !important;
+        float: left;
+        font-weight: 800;
+        margin-top: 8px;
+      }
+    }
+
+    .ui-accordion-header:not(.ui-state-disabled).ui-state-active a {
+      background-color: transparent !important;
+      border: 0 solid #333333 !important;
+      color: rgba(51, 51, 51, 0.9) !important;
+
+      .ui-accordion-header-text {
+        color: rgba(51, 51, 51, 0.9) !important;
+      }
+
+      .ui-accordion-toggle-icon {
+        color: #d51c9c !important;
+        font-size: 15px !important;
+        padding-right: 0.5em !important;
+        float: left;
+        font-weight: 800;
+        margin-top: 8px;
+      }
+    }
+
+    .ui-accordion-content {
+      border: 0 solid #c8c8c8 !important;
+      background-color: transparent !important;
+      color: #333333;
+      padding: 10px 0 !important;
+      line-height: 20px !important;
+      font-size: 14px !important;
+    }
+  }
+}
+
+a.disabled {
+  opacity: 0.5;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.days {
+  float: left;
+
+  .ui-button {
+    border-radius: 3px !important;
+    margin: 0px 10px 10px 0px !important;
+    width: 70px !important;
+    padding: 0px !important;
+    background-color: transparent;
+  }
+}

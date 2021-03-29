@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {CountryService} from './services/country.service';
+import {PAGES} from './constants/constants';
+import {UpdateService} from './services/update.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'snello-formly';
+  text: string;
+  results: string[];
+  utente: any;
+  pages = PAGES;
+  updateVisible: boolean;
+
+
+  constructor(
+    public updateService: UpdateService) {
+  }
+
+  search(event): void {
+  }
+
+  logout(): void {
+  }
+
+  public update(): void {
+    this.updateService.resetUpdateEvent();
+    this.updateVisible = false;
+    window.location.reload();
+  }
 }

@@ -1,0 +1,9 @@
+[
+  {
+    "key": "calendar",
+    "type": "calendar",
+    "templateOptions": {
+      "label": "Seleziona la data"
+    }
+  }
+  ]
