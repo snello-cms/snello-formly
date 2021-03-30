@@ -26,6 +26,7 @@ import {FormlyFieldSteps} from '../ui/steps/formly-field-steps.component';
 import {FormlyFieldCalendarComponent} from '../ui/calendar/formly-field-calendar.component';
 import {FormlyFieldAutoCompleteComponent} from '../ui/auto.complete/formly-field-auto-complete.component';
 import {FormlyFieldColorPickerComponent} from '../ui/color-picker/formly-field-color-picker.component';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import {FormlyFieldColorPickerComponent} from '../ui/color-picker/formly-field-c
     MessageModule,
     MessagesModule,
     OverlayModule,
+    CardModule,
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     SidebarModule,
