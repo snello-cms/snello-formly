@@ -47,7 +47,7 @@ export abstract class AbstractService< T> {
 
         return this.httpClient.get< HttpResponse< T []>>(this.url, {
             observe: 'response',
-            params: params
+            params
         }).pipe(
             map(res => {
                     this.listSize = res.headers.get('listSize') != null ? +res.headers.get('listSize') : 0;
@@ -72,7 +72,7 @@ export abstract class AbstractService< T> {
 
         return this.httpClient.get< HttpResponse< T []>>(this.url, {
             observe: 'response',
-            params: params
+            params
         }).pipe(
             map(res => {
                     const ts: any = res.body;
@@ -99,7 +99,7 @@ export abstract class AbstractService< T> {
 
         return this.httpClient.get(this.url + '/listSize', {
             observe: 'response',
-            params: params
+            params
         }).pipe(
             map((res: HttpResponse< number>) => {
                     return res.headers.get('listSize') != null ? +res.headers.get('listSize') : 0;
@@ -135,7 +135,7 @@ export abstract class AbstractService< T> {
             const date =
                 moment(value).utc(true).format('YYYY-MM-DD')
                     + ' ' + moment(value).utc(true).format('HH:mm:ss');
-    return date;
+            return date;
         }
         return value;
     }
@@ -144,7 +144,7 @@ export abstract class AbstractService< T> {
         return this.httpClient.get< T>(this.url + '/' + id)
             .pipe(
                 map(res => {
-                        const t: any = < any>res; // json();
+                        const t: any = res as any; // json();
                         this.postFind(t);
                         return t;
                     }
@@ -153,7 +153,7 @@ export abstract class AbstractService< T> {
             );
     }
 
-    public newInstance< T>(type: { new(): T; }): T {
+    public newInstance< T>(type: new() => T): T {
         return new type();
     }
 
@@ -179,10 +179,10 @@ export abstract class AbstractService< T> {
         // in a real world app, we may send the error to some remote logging infrastructure
         // instead of just logging it to the console
         console.error(error);
-        return throwError(error['msg'] || 'Server error');
+        return throwError(error.msg || 'Server error');
     }
 
-    public getInstance< T>(TCreator: { new(): T; }): T {
+    public getInstance< T>(TCreator: new() => T): T {
         return new TCreator();
     }
 

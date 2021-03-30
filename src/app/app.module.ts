@@ -24,6 +24,8 @@ import {SnelloComponentModule} from '../ui/snello.component.module';
 import {FormlyFieldTabs} from '../ui/tabs/formly-field-tabs.component';
 import {FormlyFieldSteps} from '../ui/steps/formly-field-steps.component';
 import {FormlyFieldCalendarComponent} from '../ui/calendar/formly-field-calendar.component';
+import {FormlyFieldAutoCompleteComponent} from '../ui/auto.complete/formly-field-auto-complete.component';
+import {FormlyFieldColorPickerComponent} from '../ui/color-picker/formly-field-color-picker.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import {FormlyFieldCalendarComponent} from '../ui/calendar/formly-field-calendar
         {name: 'tabs', component: FormlyFieldTabs},
         {name: 'steps', component: FormlyFieldSteps},
         {name: 'calendar', component: FormlyFieldCalendarComponent},
+        {name: 'autocomplete', component: FormlyFieldAutoCompleteComponent},
+        {name: 'colopicker', component: FormlyFieldColorPickerComponent},
         ]
     }),
     FormsModule,

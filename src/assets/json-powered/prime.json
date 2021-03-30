@@ -5,5 +5,19 @@
     "templateOptions": {
       "label": "Seleziona la data"
     }
+  },
+  {
+    "key": "autocomplete",
+    "type": "autocomplete",
+    "templateOptions": {
+      "label": "auto completa"
+    }
+  },
+  {
+    "key": "colopicker",
+    "type": "colopicker",
+    "templateOptions": {
+      "label": "scegli il colore"
+    }
   }
   ]

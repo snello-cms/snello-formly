@@ -14,19 +14,11 @@ import {FieldType} from '@ngx-formly/core';
       [showOtherMonths]="to.showOtherMonths"
       [selectOtherMonths]="to.selectOtherMonths"
       [selectionMode]="to.selectionMode || 'single'"
-      [numberOfMonths]="to.numberOfMonths"
-      [inline]="to.inline"
-      [readonlyInput]="to.readonlyInput"
-      [touchUI]="to.touchUI"
-      [monthNavigator]="to.monthNavigator"
-      [yearNavigator]="to.yearNavigator"
-      [yearRange]="to.yearRange"
-      [placeholder]="to.placeholder"
-      [formlyAttributes]="field"
-    >
+      [numberOfMonths]="to.numberOfMonths || 1"
+      [formControl]="formControl" [formlyAttributes]="field">
     </p-calendar>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class FormlyFieldCalendarComponent extends FieldType {
 }
