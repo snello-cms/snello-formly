@@ -13,6 +13,12 @@ import { CardModule } from 'primeng/card';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ChipsModule } from 'primeng/chips';
+import { DropdownModule } from 'primeng/dropdown';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { InputMaskModule } from 'primeng/inputmask';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ListboxModule } from 'primeng/listbox';
 import { EditorModule } from 'primeng/editor';
 import { KnobModule } from 'primeng/knob';
 
@@ -26,8 +32,13 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
 import { FormlyFieldCheckboxComponent } from './checkbox/formly-field-checkbox.component';
 import { FormlyFieldTabs } from './tabs/formly-field-tabs.component';
 import { FormlyFieldChipsComponent } from './chips/formly-field-chips.component';
+import { CascadeSelectComponent } from './cascade-select/cascade-select.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { InputMaskComponent } from './input-mask/input-mask.component';
+import { InputSwitchComponent } from './input-switch/input-switch.component';
+import { TextAreaComponent } from './text-area/text-area.component';
+import { ListBoxComponent } from './list-box/list-box.component';
 import { FormlyFieldEditorComponent } from './editor/formly-field-editor.component';
-
 
 @NgModule({
   declarations: [
@@ -40,6 +51,12 @@ import { FormlyFieldEditorComponent } from './editor/formly-field-editor.compone
     MultiSelectComponent,
     FormlyFieldCheckboxComponent,
     FormlyFieldChipsComponent,
+    CascadeSelectComponent,
+    DropdownComponent,
+    InputMaskComponent,
+    InputSwitchComponent,
+    TextAreaComponent,
+    ListBoxComponent,
     FormlyFieldEditorComponent
   ],
   imports: [
@@ -56,6 +73,12 @@ import { FormlyFieldEditorComponent } from './editor/formly-field-editor.compone
     MultiSelectModule,
     CheckboxModule,
     ChipsModule,
+    CascadeSelectModule,
+    DropdownModule,
+    InputMaskModule,
+    InputSwitchModule,
+    InputTextareaModule,
+    ListboxModule,
     EditorModule,
     KnobModule
   ],
@@ -69,6 +92,12 @@ import { FormlyFieldEditorComponent } from './editor/formly-field-editor.compone
     MultiSelectComponent,
     FormlyFieldCheckboxComponent,
     FormlyFieldChipsComponent,
+    CascadeSelectComponent,
+    DropdownComponent,
+    InputMaskComponent,
+    InputSwitchComponent,
+    TextAreaComponent,
+    ListBoxComponent,
     FormlyFieldEditorComponent
   ]
 })

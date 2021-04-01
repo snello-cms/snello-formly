@@ -7,6 +7,13 @@
     }
   },
   {
+    "key": "autocomplete",
+    "type": "autocomplete",
+    "templateOptions": {
+      "label": "auto completa"
+    }
+  },
+  {
     "key": "both",
     "type": "input",
     "templateOptions": {
