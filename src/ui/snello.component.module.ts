@@ -1,21 +1,30 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
-import { FormlyFieldTabs } from './tabs/formly-field-tabs.component';
-import { TabViewModule } from 'primeng/tabview';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormlyFieldSteps } from './steps/formly-field-steps.component';
+
+// primeng modules
+import { TabViewModule } from 'primeng/tabview';
 import { StepsModule } from 'primeng/steps';
 import { CalendarModule } from 'primeng/calendar';
-import { FormlyFieldCalendarComponent } from './calendar/formly-field-calendar.component';
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { FormlyFieldAutoCompleteComponent } from './auto.complete/formly-field-auto-complete.component';
 import { ColorPickerModule } from 'primeng/colorpicker';
-import { FormlyFieldColorPickerComponent } from './color-picker/formly-field-color-picker.component';
 import { CardModule } from 'primeng/card';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { CheckboxModule } from 'primeng/checkbox';
+import { ChipsModule } from 'primeng/chips';
+
+// custom components
+import { FormlyFieldSteps } from './steps/formly-field-steps.component';
+import { FormlyFieldCalendarComponent } from './calendar/formly-field-calendar.component';
+import { FormlyFieldAutoCompleteComponent } from './auto.complete/formly-field-auto-complete.component';
+import { FormlyFieldColorPickerComponent } from './color-picker/formly-field-color-picker.component';
 import { FormlyFieldListComponent } from './formly-field-list/formly-field-list.component';
 import { MultiSelectComponent } from './multi-select/multi-select.component';
-import { MultiSelectModule } from 'primeng/multiselect';
+import { FormlyFieldCheckboxComponent } from './checkbox/formly-field-checkbox.component';
+import { FormlyFieldTabs } from './tabs/formly-field-tabs.component';
+import { FormlyFieldChipsComponent } from './chips/formly-field-chips.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +34,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
     FormlyFieldCalendarComponent,
     FormlyFieldColorPickerComponent,
     FormlyFieldListComponent,
-    MultiSelectComponent
+    MultiSelectComponent,
+    FormlyFieldCheckboxComponent,
+    FormlyFieldChipsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +49,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
     AutoCompleteModule,
     ColorPickerModule,
     CardModule,
-    MultiSelectModule
+    MultiSelectModule,
+    CheckboxModule,
+    ChipsModule
   ],
   exports: [
     FormlyFieldAutoCompleteComponent,
@@ -47,7 +60,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
     FormlyFieldCalendarComponent,
     FormlyFieldColorPickerComponent,
     FormlyFieldListComponent,
-    MultiSelectComponent
+    MultiSelectComponent,
+    FormlyFieldCheckboxComponent,
+    FormlyFieldChipsComponent,
   ]
 })
 export class SnelloComponentModule {
