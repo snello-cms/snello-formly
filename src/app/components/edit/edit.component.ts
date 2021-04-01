@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {FormGroup} from '@angular/forms';
-import {FormlyFieldConfig, FormlyFormOptions} from '@ngx-formly/core';
-import {UsersService} from '../../services/users.service';
-import {ActivatedRoute} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators } from '@angular/forms';
+import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
+import { UsersService } from '../../services/users.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
@@ -12,17 +12,26 @@ import {ActivatedRoute} from '@angular/router';
 export class EditComponent implements OnInit {
 
   form: FormGroup;
-  options: FormlyFormOptions = {};
-  model: any;
+  options: FormlyFormOptions;
+  model: any = {};
   fields: FormlyFieldConfig[];
 
   constructor(
     protected route: ActivatedRoute,
-    private userService: UsersService) {
-    this.form = new FormGroup({});
+    private userService: UsersService
+  ) {
+    this.form = new FormGroup({}, Validators.requiredTrue);
     const id: string = this.route.snapshot.params.id;
+
+    console.log('id type: ', id);
+
     if (id) {
-      this.userService.get(id + '.json').subscribe(fields => this.fields = fields);
+      this.userService.get(id + '.json').subscribe(fields => {
+        this.fields = fields;
+
+        console.log('formly fields: ', this.fields);
+        console.log('formly form: ', this.form);
+      });
       this.model = {};
     } else {
       this.userService.getUserData().subscribe(([model, fields]) => {

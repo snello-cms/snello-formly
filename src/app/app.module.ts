@@ -1,32 +1,34 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {AutoCompleteModule} from 'primeng/autocomplete';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import {ViewComponent} from './components/view/view.component';
-import {EditComponent} from './components/edit/edit.component';
-import {ListComponent} from './components/list/list.component';
-import {HomePageComponent} from './components/home-page/home-page.component';
-import {OutletComponent} from './commons/outlet.component';
-import {SidebarModule} from 'primeng/sidebar';
-import {ServiceWorkerModule} from '@angular/service-worker';
-import {environment} from '../environments/environment';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {MessageModule} from 'primeng/message';
-import {MessagesModule} from 'primeng/messages';
-import {FormlyModule} from '@ngx-formly/core';
-import {FormlyBootstrapModule} from '@ngx-formly/bootstrap';
-import {SnelloComponentModule} from '../ui/snello.component.module';
-import {FormlyFieldTabs} from '../ui/tabs/formly-field-tabs.component';
-import {FormlyFieldSteps} from '../ui/steps/formly-field-steps.component';
-import {FormlyFieldCalendarComponent} from '../ui/calendar/formly-field-calendar.component';
-import {FormlyFieldAutoCompleteComponent} from '../ui/auto.complete/formly-field-auto-complete.component';
-import {FormlyFieldColorPickerComponent} from '../ui/color-picker/formly-field-color-picker.component';
-import {CardModule} from 'primeng/card';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ViewComponent } from './components/view/view.component';
+import { EditComponent } from './components/edit/edit.component';
+import { ListComponent } from './components/list/list.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { OutletComponent } from './commons/outlet.component';
+import { SidebarModule } from 'primeng/sidebar';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MessageModule } from 'primeng/message';
+import { MessagesModule } from 'primeng/messages';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { SnelloComponentModule } from '../ui/snello.component.module';
+import { FormlyFieldTabs } from '../ui/tabs/formly-field-tabs.component';
+import { FormlyFieldSteps } from '../ui/steps/formly-field-steps.component';
+import { FormlyFieldCalendarComponent } from '../ui/calendar/formly-field-calendar.component';
+import { FormlyFieldAutoCompleteComponent } from '../ui/auto.complete/formly-field-auto-complete.component';
+import { FormlyFieldColorPickerComponent } from '../ui/color-picker/formly-field-color-picker.component';
+import { CardModule } from 'primeng/card';
+import { FormlyFieldListComponent } from '../ui/formly-field-list/formly-field-list.component';
+import { MultiSelectComponent } from "../ui/multi-select/multi-select.component";
 
 @NgModule({
   declarations: [
@@ -49,10 +51,12 @@ import {CardModule} from 'primeng/card';
       types: [
         {name: 'tabs', component: FormlyFieldTabs},
         {name: 'steps', component: FormlyFieldSteps},
+        {name: 'list', component: FormlyFieldListComponent},
         {name: 'calendar', component: FormlyFieldCalendarComponent},
         {name: 'autocomplete', component: FormlyFieldAutoCompleteComponent},
         {name: 'colopicker', component: FormlyFieldColorPickerComponent},
-        ]
+        {name: 'multi-select', component: MultiSelectComponent},
+      ]
     }),
     FormsModule,
     HttpClientModule,
