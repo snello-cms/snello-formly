@@ -36,8 +36,6 @@ export class MultiSelectComponent extends FieldType implements OnInit {
   }
 
   onModelChange(): void {
-    console.log(this.selectedOptions);
-    console.log(this.field.formControl);
     this.field.formControl.setValue({movies: this.selectedOptions});
   }
 }

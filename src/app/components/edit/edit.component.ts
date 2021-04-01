@@ -23,20 +23,19 @@ export class EditComponent implements OnInit {
     this.form = new FormGroup({}, Validators.requiredTrue);
     const id: string = this.route.snapshot.params.id;
 
-    console.log('id type: ', id);
-
     if (id) {
       this.userService.get(id + '.json').subscribe(fields => {
         this.fields = fields;
 
         console.log('formly fields: ', this.fields);
-        console.log('formly form: ', this.form);
       });
       this.model = {};
     } else {
       this.userService.getUserData().subscribe(([model, fields]) => {
         this.model = model;
         this.fields = this.mapFields(fields);
+
+        console.log('formly fields: ', this.fields);
       });
     }
   }
