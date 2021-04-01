@@ -1,13 +1,14 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {FieldType} from '@ngx-formly/core';
-import {HttpClient} from '@angular/common/http';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FieldType } from '@ngx-formly/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'autocomplete-type',
   template: `
     <p-autoComplete
       [formControl]="formControl" [formlyAttributes]="field"
-      [suggestions]="to.suggestions" (completeMethod)="search($event)"></p-autoComplete>
+      [suggestions]="results" (completeMethod)="search($event)">
+  </p-autoComplete>
 
   `,
   changeDetection: ChangeDetectionStrategy.Default,
@@ -21,9 +22,13 @@ export class FormlyFieldAutoCompleteComponent extends FieldType {
   }
 
   search(event): void {
-    this.httpClient.get<string[]>(this.to.remoteurl + event.query).subscribe(data => {
-      this.results = data;
-    });
+    if (this.to.remoteurl) {
+      this.httpClient.get<string[]>(this.to.remoteurl + event.query).subscribe(data => {
+        this.results = data;
+      });
+    } else {
+      this.results = [];
+    }
   }
 }
 
