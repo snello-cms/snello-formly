@@ -16,6 +16,10 @@ import { CardModule } from 'primeng/card';
 import { FormlyFieldListComponent } from './formly-field-list/formly-field-list.component';
 import { MultiSelectComponent } from './multi-select/multi-select.component';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { CascadeSelectComponent } from './cascade-select/cascade-select.component';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
     FormlyFieldCalendarComponent,
     FormlyFieldColorPickerComponent,
     FormlyFieldListComponent,
-    MultiSelectComponent
+    MultiSelectComponent,
+    CascadeSelectComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
     AutoCompleteModule,
     ColorPickerModule,
     CardModule,
-    MultiSelectModule
+    MultiSelectModule,
+    CascadeSelectModule,
+    DropdownModule
   ],
   exports: [
     FormlyFieldAutoCompleteComponent,
@@ -47,7 +55,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
     FormlyFieldCalendarComponent,
     FormlyFieldColorPickerComponent,
     FormlyFieldListComponent,
-    MultiSelectComponent
+    MultiSelectComponent,
+    CascadeSelectComponent,
+    DropdownComponent
   ]
 })
 export class SnelloComponentModule {

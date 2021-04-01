@@ -5,11 +5,21 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'autocomplete-type',
   template: `
-    <p-autoComplete
-      [formControl]="formControl" [formlyAttributes]="field"
-      [suggestions]="results" (completeMethod)="search($event)">
-  </p-autoComplete>
-
+  <div class="p-fluid">
+    <div class="p-field">
+      <label>{{to.label}}</label>
+        <p-autoComplete 
+        [formControl]="formControl"
+        [formlyAttributes]="field"
+        [field]="!!to.field ? to.field : ''"
+        [minLength]="!!to.minLength ? to.minLength :1"
+        [suggestions]="results"
+        [dropdown]="!!to.dropdown === true"
+        [multiple]="!!to.multiple === true"
+        (completeMethod)="search($event)">
+      </p-autoComplete>
+      </div>
+  </div>
   `,
   changeDetection: ChangeDetectionStrategy.Default,
 })

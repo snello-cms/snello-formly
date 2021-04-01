@@ -29,6 +29,8 @@ import { FormlyFieldColorPickerComponent } from '../ui/color-picker/formly-field
 import { CardModule } from 'primeng/card';
 import { FormlyFieldListComponent } from '../ui/formly-field-list/formly-field-list.component';
 import { MultiSelectComponent } from "../ui/multi-select/multi-select.component";
+import { CascadeSelectComponent } from 'src/ui/cascade-select/cascade-select.component';
+import { DropdownComponent } from 'src/ui/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -49,13 +51,15 @@ import { MultiSelectComponent } from "../ui/multi-select/multi-select.component"
     FormlyBootstrapModule,
     FormlyModule.forRoot({
       types: [
-        {name: 'tabs', component: FormlyFieldTabs},
-        {name: 'steps', component: FormlyFieldSteps},
-        {name: 'list', component: FormlyFieldListComponent},
-        {name: 'calendar', component: FormlyFieldCalendarComponent},
-        {name: 'autocomplete', component: FormlyFieldAutoCompleteComponent},
-        {name: 'colopicker', component: FormlyFieldColorPickerComponent},
-        {name: 'multi-select', component: MultiSelectComponent},
+        { name: 'tabs', component: FormlyFieldTabs },
+        { name: 'steps', component: FormlyFieldSteps },
+        { name: 'list', component: FormlyFieldListComponent },
+        { name: 'calendar', component: FormlyFieldCalendarComponent },
+        { name: 'autocomplete', component: FormlyFieldAutoCompleteComponent },
+        { name: 'colopicker', component: FormlyFieldColorPickerComponent },
+        { name: 'multi-select', component: MultiSelectComponent },
+        { name: 'cascadeselect', component: CascadeSelectComponent },
+        { name: 'dropdown', component: DropdownComponent },
       ]
     }),
     FormsModule,
@@ -65,7 +69,7 @@ import { MultiSelectComponent } from "../ui/multi-select/multi-select.component"
     OverlayModule,
     CardModule,
     ReactiveFormsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     SidebarModule,
     SnelloComponentModule
   ]
