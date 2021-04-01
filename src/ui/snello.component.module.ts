@@ -13,6 +13,8 @@ import { CardModule } from 'primeng/card';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ChipsModule } from 'primeng/chips';
+import { EditorModule } from 'primeng/editor';
+import { KnobModule } from 'primeng/knob';
 
 // custom components
 import { FormlyFieldSteps } from './steps/formly-field-steps.component';
@@ -24,6 +26,7 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
 import { FormlyFieldCheckboxComponent } from './checkbox/formly-field-checkbox.component';
 import { FormlyFieldTabs } from './tabs/formly-field-tabs.component';
 import { FormlyFieldChipsComponent } from './chips/formly-field-chips.component';
+import { FormlyFieldEditorComponent } from './editor/formly-field-editor.component';
 
 
 @NgModule({
@@ -36,7 +39,8 @@ import { FormlyFieldChipsComponent } from './chips/formly-field-chips.component'
     FormlyFieldListComponent,
     MultiSelectComponent,
     FormlyFieldCheckboxComponent,
-    FormlyFieldChipsComponent
+    FormlyFieldChipsComponent,
+    FormlyFieldEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,9 @@ import { FormlyFieldChipsComponent } from './chips/formly-field-chips.component'
     CardModule,
     MultiSelectModule,
     CheckboxModule,
-    ChipsModule
+    ChipsModule,
+    EditorModule,
+    KnobModule
   ],
   exports: [
     FormlyFieldAutoCompleteComponent,
@@ -63,6 +69,7 @@ import { FormlyFieldChipsComponent } from './chips/formly-field-chips.component'
     MultiSelectComponent,
     FormlyFieldCheckboxComponent,
     FormlyFieldChipsComponent,
+    FormlyFieldEditorComponent
   ]
 })
 export class SnelloComponentModule {
