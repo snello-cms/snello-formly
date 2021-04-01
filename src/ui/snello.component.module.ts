@@ -19,6 +19,8 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ListboxModule } from 'primeng/listbox';
+import { EditorModule } from 'primeng/editor';
+import { KnobModule } from 'primeng/knob';
 
 // custom components
 import { FormlyFieldSteps } from './steps/formly-field-steps.component';
@@ -36,6 +38,7 @@ import { InputMaskComponent } from './input-mask/input-mask.component';
 import { InputSwitchComponent } from './input-switch/input-switch.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { ListBoxComponent } from './list-box/list-box.component';
+import { FormlyFieldEditorComponent } from './editor/formly-field-editor.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,8 @@ import { ListBoxComponent } from './list-box/list-box.component';
     InputMaskComponent,
     InputSwitchComponent,
     TextAreaComponent,
-    ListBoxComponent
+    ListBoxComponent,
+    FormlyFieldEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +78,9 @@ import { ListBoxComponent } from './list-box/list-box.component';
     InputMaskModule,
     InputSwitchModule,
     InputTextareaModule,
-    ListboxModule
+    ListboxModule,
+    EditorModule,
+    KnobModule
   ],
   exports: [
     FormlyFieldAutoCompleteComponent,
@@ -91,7 +97,8 @@ import { ListBoxComponent } from './list-box/list-box.component';
     InputMaskComponent,
     InputSwitchComponent,
     TextAreaComponent,
-    ListBoxComponent
+    ListBoxComponent,
+    FormlyFieldEditorComponent
   ]
 })
 export class SnelloComponentModule {
