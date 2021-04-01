@@ -199,5 +199,86 @@
 				}
 			]
 		}
+	},
+	{
+		"key": "inputmask",
+		"type": "inputmask",
+		"templateOptions": {
+			"label": "Phone",
+			"placeholder": "(999) 999-9999",
+			"mask": "(999) 999-9999"
+		}
+	},
+	{
+		"key": "inputswitch",
+		"type": "inputswitch",
+		"templateOptions": {
+			"label": "Selection"
+		}
+	},
+	{
+		"key": "textarea",
+		"type": "textarea",
+		"templateOptions": {
+			"label": "textarea",
+			"placeholder": "text",
+			"rows": "5",
+			"cols": "30",
+			"autoResize": true
+		}
+	},
+	{
+		"key": "listbox",
+		"type": "listbox",
+		"templateOptions": {
+			"label": "Advanced with Templating, Filtering and Multiple Selection",
+			"metaKeySelection": false,
+			"checkbox": true,
+			"filter": true,
+			"multiple": true,
+			"optionLabel": "name",
+			"options": [
+				{
+					"name": "Australia",
+					"code": "AU"
+				},
+				{
+					"name": "Brazil",
+					"code": "BR"
+				},
+				{
+					"name": "China",
+					"code": "CN"
+				},
+				{
+					"name": "Egypt",
+					"code": "EG"
+				},
+				{
+					"name": "France",
+					"code": "FR"
+				},
+				{
+					"name": "Germany",
+					"code": "DE"
+				},
+				{
+					"name": "India",
+					"code": "IN"
+				},
+				{
+					"name": "Japan",
+					"code": "JP"
+				},
+				{
+					"name": "Spain",
+					"code": "ES"
+				},
+				{
+					"name": "United States",
+					"code": "US"
+				}
+			]
+		}
 	}
 ]

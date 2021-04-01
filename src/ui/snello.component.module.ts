@@ -15,6 +15,10 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ChipsModule } from 'primeng/chips';
 import { DropdownModule } from 'primeng/dropdown';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { InputMaskModule } from 'primeng/inputmask';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ListboxModule } from 'primeng/listbox';
 
 // custom components
 import { FormlyFieldSteps } from './steps/formly-field-steps.component';
@@ -28,7 +32,10 @@ import { FormlyFieldTabs } from './tabs/formly-field-tabs.component';
 import { FormlyFieldChipsComponent } from './chips/formly-field-chips.component';
 import { CascadeSelectComponent } from './cascade-select/cascade-select.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
-
+import { InputMaskComponent } from './input-mask/input-mask.component';
+import { InputSwitchComponent } from './input-switch/input-switch.component';
+import { TextAreaComponent } from './text-area/text-area.component';
+import { ListBoxComponent } from './list-box/list-box.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +49,11 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     FormlyFieldCheckboxComponent,
     FormlyFieldChipsComponent,
     CascadeSelectComponent,
-    DropdownComponent
+    DropdownComponent,
+    InputMaskComponent,
+    InputSwitchComponent,
+    TextAreaComponent,
+    ListBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +70,11 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     CheckboxModule,
     ChipsModule,
     CascadeSelectModule,
-    DropdownModule
+    DropdownModule,
+    InputMaskModule,
+    InputSwitchModule,
+    InputTextareaModule,
+    ListboxModule
   ],
   exports: [
     FormlyFieldAutoCompleteComponent,
@@ -72,7 +87,11 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     FormlyFieldCheckboxComponent,
     FormlyFieldChipsComponent,
     CascadeSelectComponent,
-    DropdownComponent
+    DropdownComponent,
+    InputMaskComponent,
+    InputSwitchComponent,
+    TextAreaComponent,
+    ListBoxComponent
   ]
 })
 export class SnelloComponentModule {

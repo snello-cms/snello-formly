@@ -33,6 +33,10 @@ import { FormlyFieldCheckboxComponent } from '../ui/checkbox/formly-field-checkb
 import { FormlyFieldChipsComponent } from '../ui/chips/formly-field-chips.component';
 import { CascadeSelectComponent } from 'src/ui/cascade-select/cascade-select.component';
 import { DropdownComponent } from 'src/ui/dropdown/dropdown.component';
+import { InputMaskComponent } from 'src/ui/input-mask/input-mask.component';
+import { InputSwitchComponent } from 'src/ui/input-switch/input-switch.component';
+import { TextAreaComponent } from 'src/ui/text-area/text-area.component';
+import { ListBoxComponent } from 'src/ui/list-box/list-box.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +68,10 @@ import { DropdownComponent } from 'src/ui/dropdown/dropdown.component';
         { name: 'dropdown', component: DropdownComponent },
         { name: 'checkbox', component: FormlyFieldCheckboxComponent },
         { name: 'chips', component: FormlyFieldChipsComponent },
+        { name: 'inputmask', component: InputMaskComponent },
+        { name: 'inputswitch', component: InputSwitchComponent },
+        { name: 'textarea', component: TextAreaComponent },
+        { name: 'listbox', component: ListBoxComponent },
       ]
     }),
     FormsModule,

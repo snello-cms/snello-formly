@@ -5,7 +5,7 @@ import { FieldType } from '@ngx-formly/core';
 @Component({
   selector: 'app-cascade-select',
   template: `
-    <div class="p-fluid p-grid">
+    <div class="p-fluid p-grid" style="margin-left:2px">
       <div class="p-field">
         <label>{{to.label}}</label>
         <p-cascadeSelect 
