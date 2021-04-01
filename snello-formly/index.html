@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Snello Formly</title>
+  <base href="/">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="manifest.webmanifest" rel="manifest">
+  <meta content="#1976d2" name="theme-color">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<app-root></app-root>
+<script>
+  function toggleNav() {
+
+    var element = document.getElementById("mySidebar");
+    if (element.className == "sidebar close") {
+      element.className = "sidebar open";
+      document.getElementById("main").className = "close";
+      localStorage.setItem("sideBarClass", "sidebar open");
+      localStorage.setItem("mainClass", "close");
+
+    } else {
+      element.className = "sidebar close";
+      document.getElementById("main").className = "open";
+      localStorage.setItem("sideBarClass", "sidebar close");
+      localStorage.setItem("mainClass", "open");
+
+    }
+  }
+</script>
+<noscript>Please enable JavaScript to continue using this application.</noscript>
+<script src="runtime.js" defer></script><script src="polyfills.js" defer></script><script src="scripts.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
+</html>

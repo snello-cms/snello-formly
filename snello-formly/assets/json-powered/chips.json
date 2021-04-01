@@ -1,0 +1,9 @@
+[
+  {
+    "key": "skills",
+    "type": "chips",
+    "templateOptions": {
+      "label": "What skills do you have?"
+    }
+  }
+]

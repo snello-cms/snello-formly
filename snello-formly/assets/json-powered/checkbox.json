@@ -1,0 +1,9 @@
+[
+  {
+    "key": "conditionTerms",
+    "type": "checkbox",
+    "templateOptions": {
+      "label": "Accept terms&conditions"
+    }
+  }
+]
