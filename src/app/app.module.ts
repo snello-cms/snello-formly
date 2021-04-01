@@ -28,7 +28,9 @@ import { FormlyFieldAutoCompleteComponent } from '../ui/auto.complete/formly-fie
 import { FormlyFieldColorPickerComponent } from '../ui/color-picker/formly-field-color-picker.component';
 import { CardModule } from 'primeng/card';
 import { FormlyFieldListComponent } from '../ui/formly-field-list/formly-field-list.component';
-import { MultiSelectComponent } from "../ui/multi-select/multi-select.component";
+import { MultiSelectComponent } from '../ui/multi-select/multi-select.component';
+import { FormlyFieldCheckboxComponent } from '../ui/checkbox/formly-field-checkbox.component';
+import { FormlyFieldChipsComponent } from '../ui/chips/formly-field-chips.component';
 import { CascadeSelectComponent } from 'src/ui/cascade-select/cascade-select.component';
 import { DropdownComponent } from 'src/ui/dropdown/dropdown.component';
 
@@ -60,6 +62,8 @@ import { DropdownComponent } from 'src/ui/dropdown/dropdown.component';
         { name: 'multi-select', component: MultiSelectComponent },
         { name: 'cascadeselect', component: CascadeSelectComponent },
         { name: 'dropdown', component: DropdownComponent },
+        { name: 'checkbox', component: FormlyFieldCheckboxComponent },
+        { name: 'chips', component: FormlyFieldChipsComponent },
       ]
     }),
     FormsModule,
