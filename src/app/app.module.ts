@@ -43,6 +43,7 @@ import { InputSwitchComponent } from 'src/ui/input-switch/input-switch.component
 import { TextAreaComponent } from 'src/ui/text-area/text-area.component';
 import { ListBoxComponent } from 'src/ui/list-box/list-box.component';
 import { FormlyFieldEditorComponent } from '../ui/editor/formly-field-editor.component';
+import { FormlyFieldKnobComponent } from '../ui/knob/formly-field-knob.component';
 
 // environment
 import { environment } from '../environments/environment';
@@ -66,22 +67,23 @@ import { environment } from '../environments/environment';
     FormlyBootstrapModule,
     FormlyModule.forRoot({
       types: [
-        { name: 'tabs', component: FormlyFieldTabs },
-        { name: 'steps', component: FormlyFieldSteps },
-        { name: 'list', component: FormlyFieldListComponent },
-        { name: 'calendar', component: FormlyFieldCalendarComponent },
-        { name: 'autocomplete', component: FormlyFieldAutoCompleteComponent },
-        { name: 'colopicker', component: FormlyFieldColorPickerComponent },
-        { name: 'multi-select', component: MultiSelectComponent },
-        { name: 'cascadeselect', component: CascadeSelectComponent },
-        { name: 'dropdown', component: DropdownComponent },
-        { name: 'checkbox', component: FormlyFieldCheckboxComponent },
-        { name: 'chips', component: FormlyFieldChipsComponent },
-        { name: 'inputmask', component: InputMaskComponent },
-        { name: 'inputswitch', component: InputSwitchComponent },
-        { name: 'textarea', component: TextAreaComponent },
-        { name: 'listbox', component: ListBoxComponent },
-        {name: 'editor', component: FormlyFieldEditorComponent}
+        {name: 'tabs', component: FormlyFieldTabs},
+        {name: 'steps', component: FormlyFieldSteps},
+        {name: 'list', component: FormlyFieldListComponent},
+        {name: 'calendar', component: FormlyFieldCalendarComponent},
+        {name: 'autocomplete', component: FormlyFieldAutoCompleteComponent},
+        {name: 'colopicker', component: FormlyFieldColorPickerComponent},
+        {name: 'multi-select', component: MultiSelectComponent},
+        {name: 'cascadeselect', component: CascadeSelectComponent},
+        {name: 'dropdown', component: DropdownComponent},
+        {name: 'checkbox', component: FormlyFieldCheckboxComponent},
+        {name: 'chips', component: FormlyFieldChipsComponent},
+        {name: 'inputmask', component: InputMaskComponent},
+        {name: 'inputswitch', component: InputSwitchComponent},
+        {name: 'textarea', component: TextAreaComponent},
+        {name: 'listbox', component: ListBoxComponent},
+        {name: 'editor', component: FormlyFieldEditorComponent},
+        {name: 'knob', component: FormlyFieldKnobComponent},
       ]
     }),
     FormsModule,
@@ -91,7 +93,7 @@ import { environment } from '../environments/environment';
     OverlayModule,
     CardModule,
     ReactiveFormsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     SidebarModule,
     SnelloComponentModule
   ]
