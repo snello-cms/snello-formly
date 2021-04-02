@@ -81,7 +81,7 @@ import { environment } from '../environments/environment';
         { name: 'inputswitch', component: InputSwitchComponent },
         { name: 'textarea', component: TextAreaComponent },
         { name: 'listbox', component: ListBoxComponent },
-        {name: 'editor', component: FormlyFieldEditorComponent}
+        { name: 'editor', component: FormlyFieldEditorComponent }
       ]
     }),
     FormsModule,
