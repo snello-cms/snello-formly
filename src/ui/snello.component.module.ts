@@ -39,6 +39,7 @@ import { InputSwitchComponent } from './input-switch/input-switch.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { ListBoxComponent } from './list-box/list-box.component';
 import { FormlyFieldEditorComponent } from './editor/formly-field-editor.component';
+import { FormlyFieldKnobComponent } from './knob/formly-field-knob.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { FormlyFieldEditorComponent } from './editor/formly-field-editor.compone
     InputSwitchComponent,
     TextAreaComponent,
     ListBoxComponent,
-    FormlyFieldEditorComponent
+    FormlyFieldEditorComponent,
+    FormlyFieldKnobComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +100,8 @@ import { FormlyFieldEditorComponent } from './editor/formly-field-editor.compone
     InputSwitchComponent,
     TextAreaComponent,
     ListBoxComponent,
-    FormlyFieldEditorComponent
+    FormlyFieldEditorComponent,
+    FormlyFieldKnobComponent
   ]
 })
 export class SnelloComponentModule {
