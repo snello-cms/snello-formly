@@ -1,0 +1,9 @@
+[
+	{
+		"key": "inputswitch",
+		"type": "inputswitch",
+		"templateOptions": {
+			"label": "Selection"
+		}
+	}
+]

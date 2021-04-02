@@ -1,0 +1,11 @@
+[
+	{
+		"key": "inputmask",
+		"type": "inputmask",
+		"templateOptions": {
+			"label": "Phone",
+			"placeholder": "(999) 999-9999",
+			"mask": "(999) 999-9999"
+		}
+	}
+]

@@ -1,0 +1,9 @@
+[
+	{
+		"key": "tristatecheck",
+		"type": "tristatecheck",
+		"templateOptions": {
+			"label": "Tri State Check"
+		}
+	}
+]

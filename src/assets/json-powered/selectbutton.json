@@ -1,0 +1,25 @@
+[
+	{
+		"key": "selectbutton",
+		"type": "selectbutton",
+		"templateOptions": {
+			"label": "Select Button",
+			"optionLabel": "name",
+			"optionValue": "value",
+			"options": [
+				{
+					"name": "Option 1",
+					"value": 1
+				},
+				{
+					"name": "Option 2",
+					"value": 2
+				},
+				{
+					"name": "Option 3",
+					"value": 3
+				}
+			]
+		}
+	}
+]
