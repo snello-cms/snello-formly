@@ -280,5 +280,81 @@
 				}
 			]
 		}
+	},
+	{
+		"key": "password",
+		"type": "password",
+		"templateOptions": {
+			"label": "Password",
+			"toggleMask": true,
+			"feedback": true
+		}
+	},
+	{
+		"key": "color",
+		"type": "radio",
+		"templateOptions": {
+			"label": "Radio",
+			"options": [
+				{
+					"label": "No Preference",
+					"value": null
+				},
+				{
+					"label": "Green",
+					"value": "green"
+				},
+				{
+					"label": "Blue",
+					"value": "blue"
+				}
+			]
+		}
+	},
+	{
+		"key": "rating",
+		"type": "rating",
+		"templateOptions": {
+			"label": "Rate"
+		}
+	},
+	{
+		"key": "selectbutton",
+		"type": "selectbutton",
+		"templateOptions": {
+			"label": "Select Button",
+			"optionLabel": "name",
+			"optionValue": "value",
+			"options": [
+				{
+					"name": "Option 1",
+					"value": 1
+				},
+				{
+					"name": "Option 2",
+					"value": 2
+				},
+				{
+					"name": "Option 3",
+					"value": 3
+				}
+			]
+		}
+	},
+	{
+		"key": "togglebutton",
+		"type": "togglebutton",
+		"templateOptions": {
+			"label": "Customized",
+			"onLabel": "I confirm",
+			"offLabel": "I reject"
+		}
+	},
+	{
+		"key": "tristatecheck",
+		"type": "tristatecheck",
+		"templateOptions": {
+			"label": "Tri State Check"
+		}
 	}
 ]

@@ -8,10 +8,10 @@ import { FieldType } from '@ngx-formly/core';
     <div class="p-field">
       <label>{{to.label}}</label>
       <p-inputMask
-       [mask]="!!to.mask ? to.mask : ''"
+       [mask]="to.mask || ''"
        [placeholder]="to.placeholder"
-       [slotChar]="!!to.slotChar ? to.slotChar : ''"
-       [characterPattern]="!!to.characterPattern ? to.characterPattern : ''"
+       [slotChar]="to.slotChar || ''"
+       [characterPattern]="to.characterPattern || ''"
        [formControl]="formControl" [formlyAttributes]="field"></p-inputMask>
       </div>
   </div>

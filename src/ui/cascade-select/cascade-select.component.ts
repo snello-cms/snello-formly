@@ -10,9 +10,9 @@ import { FieldType } from '@ngx-formly/core';
         <label>{{to.label}}</label>
         <p-cascadeSelect 
         [options]="selectOptions" 
-        [optionLabel]="!!to.optionLabel ? to.optionLabel : ''" 
-        [optionGroupLabel]="!!to.optionGroupLabel ? to.optionGroupLabel : ''" 
-        [optionGroupChildren]="!!to.optionGroupChildren ? to.optionGroupChildren : []" 
+        [optionLabel]="to.optionLabel || ''" 
+        [optionGroupLabel]="to.optionGroupLabel || ''" 
+        [optionGroupChildren]="to.optionGroupChildren || []" 
         [placeholder]="to.placeholder"
         [formControl]="formControl" [formlyAttributes]="field">
       </p-cascadeSelect>

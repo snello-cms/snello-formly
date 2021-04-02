@@ -43,9 +43,14 @@ import { InputSwitchComponent } from 'src/ui/input-switch/input-switch.component
 import { TextAreaComponent } from 'src/ui/text-area/text-area.component';
 import { ListBoxComponent } from 'src/ui/list-box/list-box.component';
 import { FormlyFieldEditorComponent } from '../ui/editor/formly-field-editor.component';
+import { PasswordComponent } from 'src/ui/password/password.component';
 
 // environment
 import { environment } from '../environments/environment';
+import { RatingComponent } from 'src/ui/rating/rating.component';
+import { SelectbuttonComponent } from 'src/ui/selectbutton/selectbutton.component';
+import { TogglebuttonComponent } from 'src/ui/togglebutton/togglebutton.component';
+import { TriStateCheckboxComponent } from 'src/ui/tri-state-checkbox/tri-state-checkbox.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +86,12 @@ import { environment } from '../environments/environment';
         { name: 'inputswitch', component: InputSwitchComponent },
         { name: 'textarea', component: TextAreaComponent },
         { name: 'listbox', component: ListBoxComponent },
-        { name: 'editor', component: FormlyFieldEditorComponent }
+        { name: 'editor', component: FormlyFieldEditorComponent },
+        { name: 'password', component: PasswordComponent },
+        { name: 'rating', component: RatingComponent },
+        { name: 'selectbutton', component: SelectbuttonComponent },
+        { name: 'togglebutton', component: TogglebuttonComponent },
+        { name: 'tristatecheck', component: TriStateCheckboxComponent }
       ]
     }),
     FormsModule,
