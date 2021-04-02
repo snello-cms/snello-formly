@@ -10,18 +10,19 @@ import { FieldType } from '@ngx-formly/core';
         <label>{{to.label}}</label>
         <p-dropdown 
         [options]="dropdownOptions" 
-        [optionLabel]="!!to.optionLabel ? to.optionLabel : ''"
+        [optionLabel]="to.optionLabel || ''"
         [placeholder]="to.placeholder"
-        [showClear]="to.showClear === true"
-        [editable]="to.editable === true"
-        [filterBy]="!!to.filterBy ? to.filterBy : ''"
-        [filter]="to.filter === true"
-        [group]="to.group === true"
+        [showClear]="!!to.showClear"
+        [editable]="!!to.editable"
+        [filterBy]="to.filterBy || ''"
+        [filter]="!!to.filter"
+        [group]="!!to.group"
         [formControl]="formControl" [formlyAttributes]="field" >
       </p-dropdown>
         </div>
     </div>
   `,
+  styles: ['.p-checkbox-label { margin-bottom: 0px; }'],
   encapsulation: ViewEncapsulation.None
 })
 export class DropdownComponent extends FieldType implements OnInit {

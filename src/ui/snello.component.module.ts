@@ -21,6 +21,12 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ListboxModule } from 'primeng/listbox';
 import { EditorModule } from 'primeng/editor';
 import { KnobModule } from 'primeng/knob';
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from "primeng/divider";
+import { RatingModule } from 'primeng/rating';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 
 // custom components
 import { FormlyFieldSteps } from './steps/formly-field-steps.component';
@@ -40,6 +46,12 @@ import { TextAreaComponent } from './text-area/text-area.component';
 import { ListBoxComponent } from './list-box/list-box.component';
 import { FormlyFieldEditorComponent } from './editor/formly-field-editor.component';
 import { FormlyFieldKnobComponent } from './knob/formly-field-knob.component';
+import { PasswordComponent } from './password/password.component';
+import { RatingComponent } from './rating/rating.component';
+import { SelectbuttonComponent } from './selectbutton/selectbutton.component';
+import { TogglebuttonComponent } from './togglebutton/togglebutton.component';
+import { TriStateCheckboxComponent } from './tri-state-checkbox/tri-state-checkbox.component';
+
 
 @NgModule({
   declarations: [
@@ -58,6 +70,12 @@ import { FormlyFieldKnobComponent } from './knob/formly-field-knob.component';
     InputSwitchComponent,
     TextAreaComponent,
     ListBoxComponent,
+    FormlyFieldEditorComponent,
+    PasswordComponent,
+    RatingComponent,
+    SelectbuttonComponent,
+    TogglebuttonComponent,
+    TriStateCheckboxComponent,
     FormlyFieldEditorComponent,
     FormlyFieldKnobComponent
   ],
@@ -82,7 +100,13 @@ import { FormlyFieldKnobComponent } from './knob/formly-field-knob.component';
     InputTextareaModule,
     ListboxModule,
     EditorModule,
-    KnobModule
+    KnobModule,
+    PasswordModule,
+    DividerModule,
+    RatingModule,
+    SelectButtonModule,
+    ToggleButtonModule,
+    TriStateCheckboxModule
   ],
   exports: [
     FormlyFieldAutoCompleteComponent,
@@ -101,7 +125,12 @@ import { FormlyFieldKnobComponent } from './knob/formly-field-knob.component';
     TextAreaComponent,
     ListBoxComponent,
     FormlyFieldEditorComponent,
-    FormlyFieldKnobComponent
+    FormlyFieldKnobComponent,
+    FormlyFieldEditorComponent,
+    PasswordComponent,
+    RatingComponent,
+    TogglebuttonComponent,
+    TriStateCheckboxComponent
   ]
 })
 export class SnelloComponentModule {

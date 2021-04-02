@@ -1,0 +1,9 @@
+[
+	{
+		"key": "rating",
+		"type": "rating",
+		"templateOptions": {
+			"label": "Rate"
+		}
+	}
+]

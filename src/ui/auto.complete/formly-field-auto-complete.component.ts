@@ -11,11 +11,11 @@ import { HttpClient } from '@angular/common/http';
         <p-autoComplete 
         [formControl]="formControl"
         [formlyAttributes]="field"
-        [field]="!!to.field ? to.field : ''"
-        [minLength]="!!to.minLength ? to.minLength :1"
+        [field]="to.field || ''"
+        [minLength]="to.minLength || 1"
         [suggestions]="results"
-        [dropdown]="!!to.dropdown === true"
-        [multiple]="!!to.multiple === true"
+        [dropdown]="!!to.dropdown"
+        [multiple]="!!to.multiple"
         (completeMethod)="search($event)">
       </p-autoComplete>
       </div>
@@ -36,6 +36,8 @@ export class FormlyFieldAutoCompleteComponent extends FieldType {
       this.httpClient.get<string[]>(this.to.remoteurl + event.query).subscribe(data => {
         this.results = data;
       });
+    } else if (this.to.options) {
+      this.results = this.to.options as any[];
     } else {
       this.results = [];
     }

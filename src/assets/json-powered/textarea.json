@@ -1,0 +1,13 @@
+[
+	{
+		"key": "textarea",
+		"type": "textarea",
+		"templateOptions": {
+			"label": "textarea",
+			"placeholder": "text",
+			"rows": "5",
+			"cols": "30",
+			"autoResize": true
+		}
+	}
+]

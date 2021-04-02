@@ -1,0 +1,11 @@
+[
+	{
+		"key": "togglebutton",
+		"type": "togglebutton",
+		"templateOptions": {
+			"label": "Customized",
+			"onLabel": "I confirm",
+			"offLabel": "I reject"
+		}
+	}
+]

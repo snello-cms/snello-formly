@@ -10,7 +10,7 @@ import { FieldType } from '@ngx-formly/core';
         <label>{{to.label}}</label>
         <p-listbox 
         [options]="listBoxOptions" 
-        [optionLabel]="!!to.optionLabel ? to.optionLabel : ''"
+        [optionLabel]="to.optionLabel || ''"
         [metaKeySelection]="!!to.metaKeySelection"
         [checkbox]="!!to.checkbox"
         [filter]="!!to.filter"
