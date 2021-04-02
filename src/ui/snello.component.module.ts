@@ -45,6 +45,7 @@ import { InputSwitchComponent } from './input-switch/input-switch.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { ListBoxComponent } from './list-box/list-box.component';
 import { FormlyFieldEditorComponent } from './editor/formly-field-editor.component';
+import { FormlyFieldKnobComponent } from './knob/formly-field-knob.component';
 import { PasswordComponent } from './password/password.component';
 import { RatingComponent } from './rating/rating.component';
 import { SelectbuttonComponent } from './selectbutton/selectbutton.component';
@@ -74,7 +75,9 @@ import { TriStateCheckboxComponent } from './tri-state-checkbox/tri-state-checkb
     RatingComponent,
     SelectbuttonComponent,
     TogglebuttonComponent,
-    TriStateCheckboxComponent
+    TriStateCheckboxComponent,
+    FormlyFieldEditorComponent,
+    FormlyFieldKnobComponent
   ],
   imports: [
     BrowserModule,
@@ -121,6 +124,8 @@ import { TriStateCheckboxComponent } from './tri-state-checkbox/tri-state-checkb
     InputSwitchComponent,
     TextAreaComponent,
     ListBoxComponent,
+    FormlyFieldEditorComponent,
+    FormlyFieldKnobComponent,
     FormlyFieldEditorComponent,
     PasswordComponent,
     RatingComponent,

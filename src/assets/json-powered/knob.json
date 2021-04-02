@@ -1,0 +1,9 @@
+[
+  {
+    "key": "percentage",
+    "type": "knob",
+    "templateOptions": {
+      "label": "How many percent?"
+    }
+  }
+]
