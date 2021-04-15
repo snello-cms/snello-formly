@@ -1,0 +1,9 @@
+[
+  {
+    "key": "cities",
+    "type": "list",
+    "templateOptions": {
+      "label": "List of cities"
+    }
+  }
+]
